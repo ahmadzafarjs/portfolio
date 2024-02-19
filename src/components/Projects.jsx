@@ -34,7 +34,6 @@ function Projects(){
         queryKey: ["projects"],
         queryFn: getTodos,
     })
-    console.log(projects);
     return <section className="flex items-center justify-center">
         <div className="grid sm:grid-cols-2 md:grid-cols-3 sm:w-[930px]  place-items-center items-start gap-10">
             {projects?.map(project=> <Project key={project.id} project={project} />)}
