@@ -9,7 +9,7 @@ function Navbar() {
             <a target="_blank" href="https://www.github.com/ahmadzafarjs" className="w-8 cursor-pointer">
                 <img src="/images/icons8-github-120.png" alt="" />
             </a>
-            <a target="_blank" href="https://www.inatagram.com/ahmadzafarjs" className="w-8 cursor-pointer">
+            <a target="_blank" href="https://www.instagram.com/ahmadzafarjs" className="w-8 cursor-pointer">
                 <img src="/images/icons8-instagram-144.png" alt="" />
             </a>
         </nav>

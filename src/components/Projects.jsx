@@ -1,5 +1,7 @@
 import { useState } from "react"
 import Project from "./Project"
+import { useQuery } from "@tanstack/react-query"
+import { getTodos } from "../services/apiProjects"
 
 
 const projectsAPI = [
@@ -28,9 +30,14 @@ const projectsAPI = [
 
 
 function Projects(){
+    const {isLoading, data: projects, error} = useQuery({
+        queryKey: ["projects"],
+        queryFn: getTodos,
+    })
+    console.log(projects);
     return <section className="flex items-center justify-center">
         <div className="grid sm:grid-cols-2 md:grid-cols-3 sm:w-[930px]  place-items-center items-start gap-10">
-            {projectsAPI.map(project=> <Project key={project.title} project={project} />)}
+            {projects?.map(project=> <Project key={project.id} project={project} />)}
         </div>
     </section>
 }
